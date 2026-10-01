@@ -15,4 +15,19 @@
     min-width: 80px;
     transition: all 0.3s ease-in-out;
 }
+/* الكود القاطع لضبط محاذاة وأماكن الأسهم بالمسطرة في السنتر */
+.slider-container .slider-btn, .adv-slider button {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+}
+
+.slider-container .prev-btn, .adv-slider button:first-of-type {
+    left: 15px !important;
+    right: auto !important;
+}
+
+.slider-container .next-btn, .adv-slider button:last-of-type {
+    right: 15px !important;
+    left: auto !important;
+}
 
