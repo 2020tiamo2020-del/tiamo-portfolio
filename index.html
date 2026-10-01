@@ -344,7 +344,28 @@ onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px #700
             behavior: "smooth"
         });
     });
+<script>
+    // كود تبديل الكلمات داخل كارت الهيرو تلقائياً وبنعومة
+    const words = ["CREATE", "DESIGN", "VFX", "MOTION"];
+    let currentIndex = 0;
+    const targetElement = document.querySelector('.hero-card strong');
+    
+    if(targetElement) {
+        setInterval(() => {
+            targetElement.style.opacity = 0;
+            targetElement.style.transform = "scale(0.95)";
+            targetElement.style.transition = "all 0.5s ease";
+            
+            setTimeout(() => {
+                currentIndex = (currentIndex + 1) % words.length;
+                targetElement.textContent = words[currentIndex];
+                targetElement.style.opacity = 1;
+                targetElement.style.transform = "scale(1)";
+            }, 500);
+        }, 3000); // تتغير الكلمة كل 3 ثوانٍ بنعومة
+    }
 </script>
+
 
 </body>
 </html>
