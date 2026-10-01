@@ -37,4 +37,11 @@
     border-color: #fff !important;
     color: #fff !important;
 }
+/* تأثير توهج نيون أخضر قوي عند تحويم الماوس فوق أسهم المربع الرابع */
+#reels-slider .slider-btn:hover {
+    background: #00ff77 !important;
+    box-shadow: 0 0 15px #00ff77, 0 0 25px #00ff77 !important;
+    border-color: #fff !important;
+    color: #000 !important; /* بيخلي السهم أسود وسط التوهج الأخضر عشان يوضح */
+}
 
