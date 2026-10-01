@@ -83,14 +83,14 @@
 
 
 
-    <<div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);">
+    <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);">
     <!-- حاوية عريضة متناسقة 100% مع أبعاد المربعات المجاورة لمنع أي تشويه -->
     <div class="adv-slider" style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; background-color: #0b0713;">
-        <!-- الصور الأربعة داخل المجلد (تم إضافة خاصية الضغط للتكبير والتنقل) -->
-        <img class="adv-slide" src="images/project3.jpg" alt="Adv 3" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 0.5s ease-in-out; cursor: zoom-in;">
-        <img class="adv-slide" src="images/project4.jpg" alt="Adv 4" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in;">
-        <img class="adv-slide" src="images/project5.jpg" alt="Adv 5" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in;">
-        <img class="adv-slide" src="images/project6.jpg" alt="Adv 6" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in;">
+        <!-- الصور الأربعة داخل المجلد مع خاصية الضغط المباشر للتكبير -->
+        <img class="adv-slide" src="images/project3.jpg" alt="Adv 3" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 1;">
+        <img class="adv-slide" src="images/project4.jpg" alt="Adv 4" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 1;">
+        <img class="adv-slide" src="images/project5.jpg" alt="Adv 5" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 1;">
+        <img class="adv-slide" src="images/project6.jpg" alt="Adv 6" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 1;">
 
         <!-- أسهم التحكم النيون يمين ويسار للتقليب اليدوي -->
         <button onclick="changeAdvSlide(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: 1px solid #00d2ff; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; z-index: 10; font-weight: bold; display: flex; align-items: center; justify-content: center;">&#10094;</button>
@@ -102,14 +102,14 @@
 </div>
 
 <!-- النافذة المنبثقة السينمائية المضيئة (Lightbox) لعرض الصورة كاملة -->
-<div id="advLightbox" onclick="closeLightbox()" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.3s ease-in-out;">
+<div id="advLightbox" onclick="closeLightbox()" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s ease-in-out;">
     <!-- زر الإغلاق العصري -->
-    <span style="position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; transition: color 0.2s;" onmouseover="this.style.color='#00d2ff'" onmouseout="this.style.color='#fff'">&times;</span>
+    <span style="position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 10000;">&times;</span>
     <!-- حاوية الصورة المكبرة مع هالة نيون بنفسجية ساحرة -->
-    <img id="lightboxImg" src="" alt="Zoomed Work" style="max-width: 90%; max-height: 85%; border-radius: 8px; box-shadow: 0 0 30px rgba(112, 0, 255, 0.6); transform: scale(0.9); transition: transform 0.3s ease-in-out;">
+    <img id="lightboxImg" src="" alt="Zoomed Work" style="max-width: 90%; max-height: 85%; border-radius: 8px; box-shadow: 0 0 30px rgba(112, 0, 255, 0.6); transform: scale(0.9); transition: transform 0.2s ease-in-out;">
 </div>
 
-<!-- كود التشغيل الذكي والتقليب والنافذة المنبثقة (JavaScript) -->
+<!-- كود التشغيل الذكي والتقليب والنافذة المنبثقة المصحح بالكامل -->
 <script>
     let currentAdvIndex = 0;
     const advSlides = document.querySelectorAll('.adv-slide');
@@ -120,7 +120,13 @@
         else currentAdvIndex = index;
 
         advSlides.forEach((slide, i) => {
-            slide.style.opacity = (i === currentAdvIndex) ? "1" : "0";
+            if (i === currentAdvIndex) {
+                slide.style.opacity = "1";
+                slide.style.zIndex = "2"; // رفع الصورة النشطة لتصبح قابلة للضغط
+            } else {
+                slide.style.opacity = "0";
+                slide.style.zIndex = "1";
+            }
         });
     }
 
@@ -131,9 +137,9 @@
     // تقليب تلقائي ناعم كل 4 ثوانٍ
     let advInterval = setInterval(() => changeAdvSlide(1), 4000);
 
-    // دالة فتح الصورة بشكل سينمائي مبهر
+    // دالة فتح الصورة الحالية بشكل سينمائي مبهر
     function openLightbox(src) {
-        clearInterval(advInterval); // إيقاف التقليب التلقائي مؤقتاً أثناء المشاهدة
+        clearInterval(advInterval); // إيقاف التقليب التلقائي
         const lightbox = document.getElementById("advLightbox");
         const lightboxImg = document.getElementById("lightboxImg");
         
@@ -145,7 +151,7 @@
         }, 10);
     }
 
-    // دالة إغلاق النافذة والعودة للموقع
+    // دالة إغلاق النافذة الفورية والعودة للموقع
     function closeLightbox() {
         const lightbox = document.getElementById("advLightbox");
         const lightboxImg = document.getElementById("lightboxImg");
@@ -154,10 +160,12 @@
         lightboxImg.style.transform = "scale(0.9)";
         setTimeout(() => {
             lightbox.style.display = "none";
-            advInterval = setInterval(() => changeAdvSlide(1), 4000); // إعادة تشغيل التقليب التلقائي
-        }, 3000);
+            clearInterval(advInterval); // مسح الإنترفرال القديم منعا للتكرار
+            advInterval = setInterval(() => changeAdvSlide(1), 4000); // إعادة تشغيل التوجيه التلقائي
+        }, 200); // تم تسريع وقت الإغلاق لمنع تجميد الصور الأخرى
     }
 </script>
+
 
 
     <div class="work-item"><div class="placeholder"><span>04</span><strong>REELS / MOTION</strong><small>Replace with your project image</small></div></div>
