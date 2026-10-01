@@ -211,7 +211,7 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
             </div>
                 
               
-                                     <!-- المربع الرابع: ريلز وموشن (روابط مؤكدة + تحريك فوري ذكي) -->
+                                             <!-- المربع الرابع: ريلز وموشن (روابط حقيقية + حركة تلقائية مستقلة 100%) -->
         <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; width: 100%;">
             
             <!-- حاوية السلايدر الموزونة والمطابقة تماماً لبقية الجريد -->
@@ -261,8 +261,8 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                 </div>
 
                 <!-- أزرار الأسهم النيون المدعومة بالتحريك اليدوي المباشر -->
-                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); moveReelSlider(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
-                <button class="slider-btn next-btn" onclick="event.stopPropagation(); moveReelSlider(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
+                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
+                <button class="slider-btn next-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
             </div>
 
             <!-- منطقة النصوص والمعلومات الموحدة والمطابقة لبقية الأقسام -->
@@ -272,21 +272,45 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                 <p style="color: #666; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
             </div>
 
-            <!-- سكربت برمي داخلي متطور متوافق مع الاتجاهات لضمان الحركة الصحيحة -->
+            <!-- سكربت برمي مصلح بالكامل يدعم الحركة التلقائية الذاتية والتوافق التام مع الـ RTL -->
             <script>
                 let currentReelIndex = 0;
+                let reelAutoSliderTimer;
+
                 function moveReelSlider(direction) {
                     const track = document.getElementById('reels-track');
                     if (!track) return;
                     const slidesCount = track.children.length;
                     currentReelIndex = (currentReelIndex + direction + slidesCount) % slidesCount;
                     
-                    // حساب النسبة المئوية للحركة بناءً على اتجاه الموقع الافتراضي لمنع انحراف الأنيميشن
+                    const isRTL = window.getComputedStyle(document.body).direction === 'rtl';
                     const percentage = currentReelIndex * 100;
-                    track.style.transform = `translateX(-${percentage}%)`;
+                    
+                    if (isRTL) {
+                        track.style.transform = `translateX(${percentage}%)`;
+                    } else {
+                        track.style.transform = `translateX(-${percentage}%)`;
+                    }
                 }
+
+                // دالة تشغيل التمرير التلقائي كل 3 ثوانٍ
+                function startReelAutoSlider() {
+                    reelAutoSliderTimer = setInterval(() => {
+                        moveReelSlider(1);
+                    }, 3000); 
+                }
+
+                // إعادة تعيين التوقيت عند الضغط اليدوي على الأسهم لمنع التداخل
+                function resetReelTimer() {
+                    clearInterval(reelAutoSliderTimer);
+                    startReelAutoSlider();
+                }
+
+                // بدء تشغيل الحركة التلقائية فور تحميل الصفحة
+                startReelAutoSlider();
             </script>
         </div>
+
 
 
 
