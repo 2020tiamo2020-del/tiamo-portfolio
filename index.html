@@ -70,34 +70,126 @@
 
 <section id="work" class="section">
   <div class="section-head"><p class="eyebrow">03 / SELECTED WORK</p><h2>A space for your <span>best projects.</span></h2><p class="hint">Replace these placeholders with your own images and videos. The layout is ready.</p></div>
-  <div class="work-grid">
-    <div class="work-item">
-    <!-- الرابط الصحيح والمباشر لفيديو الفيسبوك -->
-    <a href="https://www.facebook.com/reel/1876850873302115" target="_blank" style="text-decoration: none; color: inherit;">
-        <!-- مسار الـ GIF الصحيح في الصفحة الرئيسية للمشروع -->
-        <img src="cinematic.gif" alt="AI Cinematic" style="width: 100%; border-radius: 12px; transition: transform 0.3s ease;">
-        <h3 style="margin-top: 15px;">01 AI CINEMATIC</h3>
-        <p style="color: #bbb; font-size: 14px;">اضغط هنا لمشاهدة الفيديو </p>
-    </a>
+          <div class="work-grid">
+            <!-- 01 المربع الأول: الفيديو السينمائي العريض الشغال تمام -->
+            <div class="work-item">
+                <a href="https://facebook.com" target="_blank" style="text-decoration: none; color: inherit;">
+                    <img src="images/cinematic.gif" alt="AI Cinematic" style="width: 100%; border-radius: 12px; transition: transform 0.3s ease;">
+                    <h3 style="margin-top: 15px;">01 AI CINEMATIC</h3>
+                    <p style="color: #bbb; font-size: 14px;">اضغط هنا لمشاهدة الفيديو العريض على فيسبوك</p>
+                </a>
+            </div>
+
+            <!-- 02 المربع الثاني: دمج الصور الافتراضي -->
+            <div class="work-item">
+                <div class="placeholder">
+                    <span>02</span>
+                    <strong>PHOTO MANIPULATION</strong>
+                    <small>Replace with your project image</small>
+                </div>
+            </div>
+
+            <!-- 03 المربع الثالث: السلايدر الاحترافي الشغال للصور الأربعة وصححنا تداخله بالكامل -->
+            <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);">
+                <div class="adv-slider" style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px; background-color: #0b0713;">
+                    <img class="adv-slide" src="images/project3.jpg" alt="Adv 3" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 1; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 2;">
+                    <img class="adv-slide" src="images/project4.jpg" alt="Adv 4" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 1;">
+                    <img class="adv-slide" src="images/project5.jpg" alt="Adv 5" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 1;">
+                    <img class="adv-slide" src="images/project6.jpg" alt="Adv 6" onclick="openLightbox(this.src)" style="position: absolute; width: 100%; height: 100%; object-fit: contain; opacity: 0; transition: opacity 0.5s ease-in-out; cursor: zoom-in; z-index: 1;">
+
+                    <button onclick="changeAdvSlide(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: 1px solid #00d2ff; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; z-index: 10; font-weight: bold; display: flex; align-items: center; justify-content: center;">&#10094;</button>
+                    <button onclick="changeAdvSlide(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0,0,0,0.6); color: #fff; border: 1px solid #00d2ff; border-radius: 50%; width: 35px; height: 35px; cursor: pointer; z-index: 10; font-weight: bold; display: flex; align-items: center; justify-content: center;">&#10095;</button>
+                </div>
+                <h3 style="margin-top: 15px;">03 ADVERTISING</h3>
+                <p style="color: #bbb; font-size: 14px;">اضغط على الصورة لمشاهدتها بكامل قوتها وحجمها المبهر</p>
+            </div>
+
+            <!-- 04 المربع الرابع: الريلز والموشن الافتراضي -->
+            <div class="work-item">
+                <div class="placeholder">
+                    <span>04</span>
+                    <strong>REELS / MOTION</strong>
+                    <small>Replace with your project image</small>
+                </div>
+            </div>
+
+            <!-- 05 المربع الخامس: الخدع البصرية الافتراضي -->
+            <div class="work-item">
+                <div class="placeholder">
+                    <span>05</span>
+                    <strong>VFX</strong>
+                    <small>Replace with your project image</small>
+                </div>
+            </div>
+
+            <!-- 06 المربع السادس: الجرافيك ديزاين الافتراضي -->
+            <div class="work-item">
+                <div class="placeholder">
+                    <span>06</span>
+                    <strong>GRAPHIC DESIGN</strong>
+                    <small>Replace with your project image</small>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- النافذة المنبثقة التكبيرية المنفصلة تماماً لتجنب أي تداخل أوسام -->
+<div id="advLightbox" onclick="closeLightbox()" style="display: none; position: fixed; z-index: 9999; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.95); align-items: center; justify-content: center; opacity: 0; transition: opacity 0.2s ease-in-out;">
+    <span style="position: absolute; top: 20px; right: 30px; color: #fff; font-size: 40px; font-weight: bold; cursor: pointer; z-index: 10000;">&times;</span>
+    <img id="lightboxImg" src="" alt="Zoomed Work" style="max-width: 90%; max-height: 85%; border-radius: 8px; box-shadow: 0 0 30px rgba(112, 0, 255, 0.6); transform: scale(0.9); transition: transform 0.2s ease-in-out;">
 </div>
 
+<!-- كود الجافا سكريبت النظيف جداً والمفصول برمجياً عن الهيكل -->
+<script>
+    let currentAdvIndex = 0;
+    const advSlides = document.querySelectorAll('.adv-slide');
 
+    function showAdvSlide(index) {
+        if (index >= advSlides.length) currentAdvIndex = 0;
+        else if (index < 0) currentAdvIndex = advSlides.length - 1;
+        else currentAdvIndex = index;
 
-    <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; box-shadow: 0 4px 15px rgba(0, 242, 254, 0.2);">
-    
+        advSlides.forEach((slide, i) => {
+            if (i === currentAdvIndex) {
+                slide.style.opacity = "1";
+                slide.style.zIndex = "2";
+            } else {
+                slide.style.opacity = "0";
+                slide.style.zIndex = "1";
+            }
+        });
+    }
 
+    function changeAdvSlide(direction) {
+        showAdvSlide(currentAdvIndex + direction);
+    }
 
+    let advInterval = setInterval(() => changeAdvSlide(1), 4000);
 
-    <div class="work-item"><div class="placeholder"><span>04</span><strong>REELS / MOTION</strong><small>Replace with your project image</small></div></div>
-    <div class="work-item"><div class="placeholder"><span>05</span><strong>VFX</strong><small>Replace with your project image</small></div></div>
-    <div class="work-item"><div class="placeholder"><span>06</span><strong>GRAPHIC DESIGN</strong><small>Replace with your project image</small></div></div>
-  </div>
-</section>
+    function openLightbox(src) {
+        clearInterval(advInterval);
+        const lightbox = document.getElementById("advLightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        lightboxImg.src = src;
+        lightbox.style.display = "flex";
+        setTimeout(() => {
+            lightbox.style.opacity = "1";
+            lightboxImg.style.transform = "scale(1)";
+        }, 10);
+    }
 
-<section class="section process">
-  <div class="section-head"><p class="eyebrow">04 / PROCESS</p><h2>From concept to <span>final frame.</span></h2></div>
-  <div class="steps"><div><b>01</b><h3>Concept</h3><p>Understand the idea, goal and visual direction.</p></div><div><b>02</b><h3>Create</h3><p>Build the artwork, edit, composite or video.</p></div><div><b>03</b><h3>Refine</h3><p>Color, details, motion, effects and final polish.</p></div><div><b>04</b><h3>Deliver</h3><p>Export the finished work ready for its platform.</p></div></div>
-</section>
+    function closeLightbox() {
+        const lightbox = document.getElementById("advLightbox");
+        const lightboxImg = document.getElementById("lightboxImg");
+        lightbox.style.opacity = "0";
+        lightboxImg.style.transform = "scale(0.9)";
+        setTimeout(() => {
+            lightbox.style.display = "none";
+            clearInterval(advInterval);
+            advInterval = setInterval(() => changeAdvSlide(1), 4000);
+        }, 200);
+    }
+</script>
 
 <section id="contact" class="contact">
   <p class="eyebrow">05 / CONTACT</p><h2>Have an idea?<br><span>Let’s make it visual.</span></h2>
