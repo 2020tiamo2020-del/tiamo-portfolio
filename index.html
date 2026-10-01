@@ -208,74 +208,71 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                 <p style="color: #bbb; font-size: 13px; margin: 0;">🔸 أضغط على الصورة لمشاهدتها بكامل حجمها 🔸</p>
                 </div>
 
-
             </div>
-                <!-- المربع الرابع: ريلز وموشن (حجم طبيعي وموزون متناسق مع الجريد) -->
-        <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; min-height: 380px; max-height: 420px;">
+                
+              
+                     <!-- المربع الرابع: ريلز وموشن (كامل داخل الإطار ومتوافق مع حركة السلايدر) -->
+        <div class="work-item project-carousel-container" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%;">
             
-            <!-- حاوية السلايدر بمقاس ثابت ومحكوم يمنع تمدد المربع -->
-            <div class="slider-container" id="reels-slider" style="position: relative; width: 100%; height: 280px; overflow: hidden; background-color: #171123; display: flex; align-items: center; justify-content: center;">
+            <!-- حاوية السلايدر المتوافقة مع كود الجافاسكريبت الخاص بموقعك -->
+            <div class="slider-container carousel-wrapper" id="reels-slider" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; display: flex; align-items: center; justify-content: center;">
                 <div class="slider-slides" style="display: flex; transition: transform 0.5s ease; width: 100%; height: 100%;">
                     
                     <!-- الريل 1 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm1.jpg" alt="Reels 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.8;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
+                    <div class="slide carousel-slide-item active" style="min-width: 100%; height: 100%; position: relative; cursor: pointer; background-color: #0b0713;" onclick="window.open('https://facebook.com', '_blank')">
+                        <img src="images/rm1.jpg" alt="Reels 1" style="width: 100%; height: 100%; object-fit: contain; opacity: 0.9;">
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
-                            <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو 🔸</span>
                         </div>
                     </div>
 
                     <!-- الريل 2 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm2.jpg" alt="Reels 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.8;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
+                    <div class="slide carousel-slide-item" style="min-width: 100%; height: 100%; position: relative; cursor: pointer; background-color: #0b0713;" onclick="window.open('https://facebook.com', '_blank')">
+                        <img src="images/rm2.jpg" alt="Reels 2" style="width: 100%; height: 100%; object-fit: contain; opacity: 0.9;">
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
-                            <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو 🔸</span>
                         </div>
                     </div>
 
                     <!-- الريل 3 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm3.jpg" alt="Reels 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.8;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
+                    <div class="slide carousel-slide-item" style="min-width: 100%; height: 100%; position: relative; cursor: pointer; background-color: #0b0713;" onclick="window.open('https://facebook.com', '_blank')">
+                        <img src="images/rm3.jpg" alt="Reels 3" style="width: 100%; height: 100%; object-fit: contain; opacity: 0.9;">
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
-                            <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو 🔸</span>
                         </div>
                     </div>
 
                     <!-- الريل 4 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm4.jpg" alt="Reels 4" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.8;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
+                    <div class="slide carousel-slide-item" style="min-width: 100%; height: 100%; position: relative; cursor: pointer; background-color: #0b0713;" onclick="window.open('https://facebook.com', '_blank')">
+                        <img src="images/rm4.jpg" alt="Reels 4" style="width: 100%; height: 100%; object-fit: contain; opacity: 0.9;">
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
-                            <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو 🔸</span>
                         </div>
                     </div>
 
                     <!-- الريل 5 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm5.jpg" alt="Reels 5" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; object-position: center top; opacity: 0.8;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
+                    <div class="slide carousel-slide-item" style="min-width: 100%; height: 100%; position: relative; cursor: pointer; background-color: #0b0713;" onclick="window.open('https://facebook.com', '_blank')">
+                        <img src="images/rm5.jpg" alt="Reels 5" style="width: 100%; height: 100%; object-fit: contain; opacity: 0.9;">
+                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
-                            <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو 🔸</span>
                         </div>
                     </div>
 
                 </div>
                 
-                <!-- أزرار الأسهم متناسقة فوق الصورة الثابتة -->
-                <button class="slider-btn prev-btn" onclick="handleCustomSlider(this, -1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.15); border-radius: 50%; width: 40px; height: 40px; border: none; color: #00ff77; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
-                <button class="slider-btn next-btn" onclick="handleCustomSlider(this, 1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.15); border-radius: 50%; width: 40px; height: 40px; border: none; color: #00ff77; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
+                <!-- أزرار الأسهم الكلاسيكية التي يتعرف عليها كود الـ JavaScript تلقائياً -->
+                <button class="carousel-btn prev-btn" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
+                <button class="carousel-btn next-btn" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
             </div>
 
-            <!-- منطقة النصوص والمعلومات الموحدة والمطابقة للمربعات المجاورة -->
-            <div style="padding: 15px 15px 15px 15px; text-align: left; background-color: #0b0713;">
+            <!-- منطقة النصوص الموحدة والمطابقة للمربعات المجاورة -->
+            <div style="padding: 15px 15px 18px 15px; text-align: left; background-color: #0b0713;">
                 <span style="font-size: 0.75rem; color: #8a2be2; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">04</span>
                 <h3 style="margin: 0px 0px 5px; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">REELS / MOTION</h3>
-                <p style="color: #666; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة  فيديو الريل والتنقل بالأسهم 🔸</p>
+                <p style="color: #666; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
             </div>
         </div>
+
 
 
 
