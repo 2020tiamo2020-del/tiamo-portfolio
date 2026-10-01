@@ -62,7 +62,18 @@
             <h2>What I <span style="color: #00d2ff;">create.</span></h2>
         </div>
         
+                <style>
+            .services-grid article {
+                cursor: pointer;
+            }
+            .services-grid article:hover {
+                transform: translateY(-8px) scale(1.03) !important;
+                border-color: #00d2ff !important;
+                box-shadow: 0 10px 25px rgba(0, 210, 255, 0.25) !important;
+            }
+        </style>
         <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; width: 100%;">
+
             
             <article data-aos="fade-up" data-aos-delay="100" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); padding: 25px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.2); transition: transform 0.3s ease, box-shadow 0.3s ease;">
                 <b style="color: #00d2ff; font-size: 14px; display: block; margin-bottom: 10px;">01</b>
