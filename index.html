@@ -71,15 +71,25 @@
 <section id="work" class="section">
   <div class="section-head"><p class="eyebrow">03 / SELECTED WORK</p><h2>A space for your <span>best projects.</span></h2><p class="hint">Replace these placeholders with your own images and videos. The layout is ready.</p></div>
           <div class="work-grid">
-            <!--  المربع الأول: الفيديو السينمائي العريض الشغال تمام -->
-            <div class="work-item">
-    <a href="https://www.facebook.com/reel/1876850873302115" target="_blank" style="text-decoration: none; color: inherit;">
-        <!-- تم تعديل المسار ليقرأ ملف cinematic.gif من الخارج مباشرة بدون مجلد images -->
-        <img src="cinematic.gif" alt="AI Cinematic" style="width: 100%; border-radius: 12px; transition: transform 0.3s ease;">
-        <h3 style="margin-top: 15px;"> AI CINEMATIC</h3>
-        <p style="color: #bbb; font-size: 14px;">🔸أضغط هنا لمشاهدة الفيديو🔸 </p>
-    </a>
-</div>
+                        <!--  المربع الأول: الفيديو السينمائي العريض الموزون بالمسطرة -->
+            <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; justify-content: flex-end; background-color: #0b0713; min-height: 250px;">
+                <a href="https://www.facebook.com/reel/1876850873302115" target="_blank" style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
+                    
+                    <!-- حاوية الصورة لضمان ثبات النسبة والوزنية العلوية والسفلية -->
+                    <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px 12px 0 0;">
+                        <img src="cinematic.gif" alt="AI Cinematic" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.3s ease;">
+                    </div>
+                    
+                    <!-- منطقة النصوص الموازية لباقي المربعات تماماً داخل الكارت -->
+                    <div style="padding: 20px 15px; text-align: left;">
+                        <span style="font-size: 0.75rem; color: #7000ff; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">01</span>
+                        <h3 style="margin: 0 0 5px 0; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">AI CINEMATIC</h3>
+                        <p style="color: #bbb; font-size: 13px; margin: 0;">🔸 أضغط هنا لمشاهدة الفيديو 🔸</p>
+                    </div>
+                    
+                </a>
+            </div>
+
 
 
             <!--  المربع الثاني: دمج الصور الافتراضي -->
