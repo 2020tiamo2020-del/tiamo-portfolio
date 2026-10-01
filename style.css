@@ -30,4 +30,11 @@
     right: 15px !important;
     left: auto !important;
 }
+/* تأثير إضاءة النيون الأزرق الفاتح لأسهم المربع الثالث عند الوقوف عليها */
+.adv-slider button:hover {
+    background: #00d2ff !important;
+    box-shadow: 0 0 15px #00d2ff, 0 0 25px #00d2ff !important;
+    border-color: #fff !important;
+    color: #fff !important;
+}
 
