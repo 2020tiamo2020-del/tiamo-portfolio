@@ -211,67 +211,83 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
             </div>
                 
               
-                             <!-- المربع الرابع: ريلز وموشن (أبعاد محكومة، روابط حقيقية وسلايدر نشط) -->
+                                     <!-- المربع الرابع: ريلز وموشن (روابط مؤكدة + تحريك فوري ذكي) -->
         <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; width: 100%;">
             
-            <!-- حاوية السلايدر لضمان احتواء الصورة الطولية كاملة دون تشويه أو تمدد غريب -->
-            <div class="slider-container" id="reels-slider" style="position: relative; width: 100%; height: 0; padding-bottom: 56.25%; flex-grow: 1; overflow: hidden; background-color: #0b0713;">
-                <div class="slider-slides" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; transition: transform 0.5s ease;">
+            <!-- حاوية السلايدر الموزونة والمطابقة تماماً لبقية الجريد -->
+            <div class="slider-container" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; min-height: 250px;">
+                <div class="reels-slides-wrapper" id="reels-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out; transform: translateX(0px);">
                     
                     <!-- الريل 1 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm1.jpg" alt="Reels 1" style="width: 100%; height: 100%; object-fit: contain; background-color: #0b0713;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
+                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/4017785205147909', '_blank')">
+                        <img src="images/rm1.jpg" alt="Reels 1" style="width: 100%; height: 100%; object-fit: contain;">
+                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
                         </div>
                     </div>
 
                     <!-- الريل 2 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm2.jpg" alt="Reels 2" style="width: 100%; height: 100%; object-fit: contain; background-color: #0b0713;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
+                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/3463296903818986', '_blank')">
+                        <img src="images/rm2.jpg" alt="Reels 2" style="width: 100%; height: 100%; object-fit: contain;">
+                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
                         </div>
                     </div>
 
                     <!-- الريل 3 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm3.jpg" alt="Reels 3" style="width: 100%; height: 100%; object-fit: contain; background-color: #0b0713;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
+                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/1666649731363694', '_blank')">
+                        <img src="images/rm3.jpg" alt="Reels 3" style="width: 100%; height: 100%; object-fit: contain;">
+                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
                         </div>
                     </div>
 
                     <!-- الريل 4 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm4.jpg" alt="Reels 4" style="width: 100%; height: 100%; object-fit: contain; background-color: #0b0713;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
+                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/1848437869396200', '_blank')">
+                        <img src="images/rm4.jpg" alt="Reels 4" style="width: 100%; height: 100%; object-fit: contain;">
+                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
                         </div>
                     </div>
 
                     <!-- الريل 5 -->
-                    <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                        <img src="images/rm5.jpg" alt="Reels 5" style="width: 100%; height: 100%; object-fit: contain; background-color: #0b0713;">
-                        <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.2); pointer-events: none;">
+                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/25238938432408638', '_blank')">
+                        <img src="images/rm5.jpg" alt="Reels 5" style="width: 100%; height: 100%; object-fit: contain;">
+                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
                             <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
                         </div>
                     </div>
 
                 </div>
-                
-                <!-- أزرار الأسهم مدعومة بوظيفة التحريك المخصصة المباشرة لمنع التجمد -->
-                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); handleCustomSlider(this, -1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
-                <button class="slider-btn next-btn" onclick="event.stopPropagation(); handleCustomSlider(this, 1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
+
+                <!-- أزرار الأسهم النيون المدعومة بالتحريك اليدوي المباشر -->
+                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); moveReelSlider(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
+                <button class="slider-btn next-btn" onclick="event.stopPropagation(); moveReelSlider(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
             </div>
 
-            <!-- منطقة النصوص الموحدة بالكامل مع المربعات المجاورة في الطول والتنسيق -->
+            <!-- منطقة النصوص والمعلومات الموحدة والمطابقة لبقية الأقسام -->
             <div style="padding: 15px 15px 18px 15px; text-align: left; background-color: #0b0713;">
                 <span style="font-size: 0.75rem; color: #8a2be2; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">04</span>
                 <h3 style="margin: 0px 0px 5px; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">REELS / MOTION</h3>
-                <p style="color: #666; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة فيديو الريل والتنقل بالأسهم 🔸</p>
+                <p style="color: #666; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
             </div>
+
+            <!-- سكربت برمي داخلي متطور متوافق مع الاتجاهات لضمان الحركة الصحيحة -->
+            <script>
+                let currentReelIndex = 0;
+                function moveReelSlider(direction) {
+                    const track = document.getElementById('reels-track');
+                    if (!track) return;
+                    const slidesCount = track.children.length;
+                    currentReelIndex = (currentReelIndex + direction + slidesCount) % slidesCount;
+                    
+                    // حساب النسبة المئوية للحركة بناءً على اتجاه الموقع الافتراضي لمنع انحراف الأنيميشن
+                    const percentage = currentReelIndex * 100;
+                    track.style.transform = `translateX(-${percentage}%)`;
+                }
+            </script>
         </div>
+
 
 
 
