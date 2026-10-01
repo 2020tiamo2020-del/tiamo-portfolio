@@ -4,3 +4,8 @@
 .work-item, .work-item a, .work-item div { transition: transform 0.25s ease-out, box-shadow 0.25s ease-out !important; position: relative; } .work-item:hover { transform: scale(1.015) translateY(-3px) !important; box-shadow: 0 12px 25px rgba(112, 0, 255, 0.2) !important; z-index: 99 !important; } .work-item img, .work-item .adv-slider, .work-item h3, .work-item p { transform: none !important; transition: none !important; } .adv-slider button { transform: scale(1) !important; z-index: 100 !important; }
 /* تحريك المدارات والكرة لجعل الواجهة حية */
 .orbit-a { animation: spin-clockwise 20s linear infinite; } .orbit-b { animation: spin-counter 25s linear infinite; } .orb { animation: float-glow 6s ease-in-out infinite; } .hero-card { animation: card-float 5s ease-in-out infinite; } @keyframes spin-clockwise { from { transform: rotate(-25deg); } to { transform: rotate(335deg); } } @keyframes spin-counter { from { transform: rotate(45deg); } to { transform: rotate(-315deg); } } @keyframes float-glow { 0%, 100% { transform: translateY(0); box-shadow: 0 0 100px #803cff55; } 50% { transform: translateY(-10px); box-shadow: 0 0 130px #803cff88; } } @keyframes card-float { 0%, 100% { transform: translateY(0) rotate(0deg); } 50% { transform: translateY(-6px) rotate(1deg); } }
+/* تفعيل إمكانية التحريك والتلاشي لعنصر الكلمة المتغيرة */
+#dynamic-word, .hero-card strong {
+    display: inline-block !important;
+    transition: all 0.4s ease;
+}
