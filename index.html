@@ -349,8 +349,7 @@ onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px #700
     const words = ["CREATE", "DESIGN", "VFX", "MOTION"];
     let currentIndex = 0;
     
-    // محاولة تحديد العنصر بأكثر من طريقة لضمان الوصول إليه
-    const targetElement = document.querySelector('.hero-card strong') || document.querySelector('.hero-card h3') || document.querySelector('.hero-card p');
+    const targetElement = document.querySelector('.hero-card strong');
     
     if (targetElement) {
         setInterval(() => {
@@ -367,6 +366,7 @@ onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px #700
         }, 3000); // تتغير الكلمة كل 3 ثوانٍ بنعومة
     }
 </script>
+
 
 
 </body>
