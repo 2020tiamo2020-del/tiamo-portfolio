@@ -348,9 +348,11 @@ onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px #700
     // كود تبديل الكلمات داخل كارت الهيرو تلقائياً وبنعومة
     const words = ["CREATE", "DESIGN", "VFX", "MOTION"];
     let currentIndex = 0;
-    const targetElement = document.querySelector('.hero-card strong');
     
-    if(targetElement) {
+    // محاولة تحديد العنصر بأكثر من طريقة لضمان الوصول إليه
+    const targetElement = document.querySelector('.hero-card strong') || document.querySelector('.hero-card h3') || document.querySelector('.hero-card p');
+    
+    if (targetElement) {
         setInterval(() => {
             targetElement.style.opacity = 0;
             targetElement.style.transform = "scale(0.95)";
