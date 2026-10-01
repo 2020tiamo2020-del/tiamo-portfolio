@@ -38,7 +38,7 @@
   </div>
   <div class="hero-art">
     <div class="orb"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-    <div class="hero-card"><span>AI</span><strong>CREATE</strong><small>DESIGN • MOTION • VFX</small></div>
+    <div class="hero-card"><span>AI</span><strong>CREATE</strong><small> • DESIGN • MOTION • VFX</small></div>
   </div>
 </section>
 
@@ -346,29 +346,33 @@ onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px #700
     });
 <script>
 document.addEventListener("DOMContentLoaded", function() {
-    // كود تبديل الكلمات داخل كارت الهيرو تلقائياً وبنعومة
+    // الكلمات التي ستتبدل تلقائياً
     const words = ["CREATE", "DESIGN", "VFX", "MOTION"];
     let currentIndex = 0;
     
+    // تحديد العنصر بدقة شديدة داخل الكارت
     const targetElement = document.querySelector('.hero-card strong');
     
     if (targetElement) {
         setInterval(() => {
+            // تأثير الاختفاء والتقلص بنعومة
             targetElement.style.opacity = 0;
-            targetElement.style.transform = "scale(0.95)";
-            targetElement.style.transition = "all 0.5s ease";
+            targetElement.style.transform = "scale(0.9)";
+            targetElement.style.transition = "all 0.4s ease";
             
             setTimeout(() => {
+                // تغيير الكلمة
                 currentIndex = (currentIndex + 1) % words.length;
                 targetElement.textContent = words[currentIndex];
+                
+                // تأثير الظهور والتمدد بنعومة
                 targetElement.style.opacity = 1;
                 targetElement.style.transform = "scale(1)";
-            }, 500);
-        }, 3000); // تتغير الكلمة كل 3 ثوانٍ بنعومة
+            }, 400);
+        }, 2500); // تتبدل الكلمة كل ثانيتين ونصف
     }
 });
 </script>
-
 
 
 
