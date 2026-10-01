@@ -38,7 +38,7 @@
   </div>
   <div class="hero-art">
     <div class="orb"></div><div class="orbit orbit-a"></div><div class="orbit orbit-b"></div>
-    <div class="hero-card"><span>AI</span><strong class="word-changer"></strong><small> • DESIGN • MOTION • VFX</small></div>
+    <div class="hero-card"><span>AI</span> <strong class="word-changer">CREATE</strong><small> • DESIGN • MOTION • VFX</small></div>
   </div>
 </section>
 
@@ -345,33 +345,32 @@ onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='0 0 15px #700
         });
     });
 <script>
+// سكريبت تبديل الكلمات الذكي والمضمون 100%
 document.addEventListener("DOMContentLoaded", function() {
-    // الكلمات التي ستتبدل داخل الكارت
     const words = ["CREATE", "DESIGN", "VFX", "MOTION"];
     let currentIndex = 0;
+    const target = document.querySelector('.word-changer');
     
-    // استهداف العنصر من خلال الـ ID الفريد لضمان العمل بنسبة 100%
-    const targetElement = document.getElementById('dynamic-word');
-    
-    if (targetElement) {
+    if (target) {
         setInterval(() => {
-            // تأثير الاختفاء والتقلص بنعومة
-            targetElement.style.opacity = 0;
-            targetElement.style.transform = "scale(0.9)";
-            targetElement.style.transition = "all 0.4s ease";
+            // 1. اختفاء خفيف وتصغير بنعومة
+            target.style.opacity = "0";
+            target.style.transform = "scale(0.8)";
             
             setTimeout(() => {
-                // الانتقال للكلمة التالية في المصفوفة
+                // 2. تغيير الكلمة بعد الاختفاء
                 currentIndex = (currentIndex + 1) % words.length;
-                targetElement.textContent = words[currentIndex];
+                target.textContent = words[currentIndex];
                 
-                // تأثير الظهور والتمدد بنعومة
-                targetElement.style.opacity = 1;
-                targetElement.style.transform = "scale(1)";
-            }, 400);
-        }, 2500); // تتبدل الكلمة كل ثانيتين ونصف
+                // 3. ظهور وتكبير بنعومة
+                target.style.opacity = "1";
+                target.style.transform = "scale(1)";
+            }, 300); // وقت الاختفاء 300 جزء من الثانية
+        }, 2500); // التبديل يتم كل ثانيتين ونصف
     }
 });
+</script>
+
 </script>
 
 
