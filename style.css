@@ -9,21 +9,10 @@
     display: inline-block !important;
     transition: all 0.4s ease;
 }
-/* كود تغيير الكلمات تلقائياً بالـ CSS فقط بدون جافا سكريبت */
-.word-changer::before {
+/* تنسيق الكلمة المتغيرة لتكون مرنة وقابلة للتحجيم */
+.word-changer {
     display: inline-block !important;
-    animation: change-text 12s infinite;
-    font-weight: bold;
+    min-width: 80px;
+    transition: all 0.3s ease-in-out;
 }
 
-@keyframes change-text {
-    0%, 20% { content: "CREATE"; opacity: 1; transform: scale(1); }
-    22% { opacity: 0; transform: scale(0.9); }
-    25%, 45% { content: "DESIGN"; opacity: 1; transform: scale(1); }
-    47% { opacity: 0; transform: scale(0.9); }
-    50%, 70% { content: "VFX"; opacity: 1; transform: scale(1); }
-    72% { opacity: 0; transform: scale(0.9); }
-    75%, 95% { content: "MOTION"; opacity: 1; transform: scale(1); }
-    97%, 100% { opacity: 0; transform: scale(0.9); }
-
-}
