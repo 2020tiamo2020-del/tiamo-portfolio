@@ -211,14 +211,14 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
             </div>
                 
               
-                                                     <!-- المربع الرابع: ريلز وموشن (حجم محكوم + صورة طولية بالمنتصف + أسهم نيون مشعة) -->
-        <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; min-height: 480px; max-height: 520px; width: 100%;">
+                                                            <!-- المربع الرابع: ريلز وموشن (محاذاة تامة للنصوص + أسهم نيون تفاعلية) -->
+        <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; min-height: 480px; max-height: 520px; width: 100%; justify-content: space-between;">
             
-            <!-- حاوية السلايدر - تم توسيطها وضبطها لعرض النسبة الطولية كاملة -->
-            <div class="slider-container" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; display: flex; align-items: center; justify-content: center; padding: 10px 0;">
+            <!-- حاوية السلايدر - تم أخذ المساحة العلوية بالكامل لمنع سحب النص لأسفل -->
+            <div class="slider-container" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; display: flex; align-items: center; justify-content: center; padding: 15px 0 5px 0;">
                 
                 <!-- الإطار الداخلي الطولي الممركز بالمنتصف تماماً -->
-                <div style="width: auto; height: 100%; max-height: 380px; aspect-ratio: 9/16; overflow: hidden; position: relative; border-radius: 8px; background-color: #000; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);">
+                <div style="width: auto; height: 100%; max-height: 350px; aspect-ratio: 9/16; overflow: hidden; position: relative; border-radius: 8px; background-color: #000; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);">
                     <div class="reels-slides-wrapper" id="reels-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out; transform: translateX(0px);">
                         
                         <!-- الريل 1 -->
@@ -264,19 +264,26 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                     </div>
                 </div>
 
-                <!-- أزرار الأسهم النيون المشعة الثابتة والمشعة بوضوح وثبات -->
-                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(-1)" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 38px; height: 38px; border: 2px solid #00ff77; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 0 0 12px #00ff77, inset 0 0 6px #00ff77; transition: all 0.3s ease;">❮</button>
-                <button class="slider-btn next-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(1)" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 38px; height: 38px; border: 2px solid #00ff77; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 0 0 12px #00ff77, inset 0 0 6px #00ff77; transition: all 0.3s ease;">❯</button>
+                <!-- أزرار الأسهم النيون المدعومة بتأثير التحوّيم الفوسفوري المباشر (Inline Hover Styles) -->
+                <button class="neon-arrow prev-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(-1)" 
+                        onmouseenter="this.style.boxShadow='0 0 20px #00ff77, inset 0 0 10px #00ff77'; this.style.backgroundColor='rgba(0, 255, 119, 0.2)';" 
+                        onmouseleave="this.style.boxShadow='none'; this.style.backgroundColor='rgba(0, 0, 0, 0.6)';"
+                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 38px; height: 38px; border: 2px solid #00ff77; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease;">❮</button>
+                
+                <button class="neon-arrow next-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(1)" 
+                        onmouseenter="this.style.boxShadow='0 0 20px #00ff77, inset 0 0 10px #00ff77'; this.style.backgroundColor='rgba(0, 255, 119, 0.2)';" 
+                        onmouseleave="this.style.boxShadow='none'; this.style.backgroundColor='rgba(0, 0, 0, 0.6)';"
+                        style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 38px; height: 38px; border: 2px solid #00ff77; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; transition: all 0.3s ease;">❯</button>
             </div>
 
-            <!-- منطقة النصوص والمعلومات الموحدة والمطابقة لبقية الأقسام -->
-            <div style="padding: 10px 15px 18px 15px; text-align: left; background-color: #0b0713;">
+            <!-- منطقة النصوص والمعلومات الموحدة والمثبتة بأسفل الكارت تماماً لتوازي المربعات المجاورة -->
+            <div style="padding: 10px 20px 22px 20px; text-align: right; background-color: #0b0713; width: 100%; box-sizing: border-box; display: flex; flex-direction: column; justify-content: flex-end;">
                 <span style="font-size: 0.75rem; color: #8a2be2; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">04</span>
-                <h3 style="margin: 0px 0px 5px; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">REELS / MOTION</h3>
-                <p style="color: #666; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
+                <h3 style="margin: 0px 0px 8px; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">REELS / MOTION</h3>
+                <p style="color: #666; font-size: 13px; margin: 0; direction: rtl;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
             </div>
 
-            <!-- سكربت الحركة التلقائية المتوافق تماماً مع الـ RTL والمواقع العربية -->
+            <!-- سكربت السلايدر التلقائي المتوافق تماماً مع الـ RTL والمواقع العربية -->
             <script>
                 let currentReelIndex = 0;
                 let reelAutoSliderTimer;
@@ -311,6 +318,7 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                 startReelAutoSlider();
             </script>
         </div>
+
 
 
 
