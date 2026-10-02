@@ -211,68 +211,72 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
             </div>
                 
               
-                                             <!-- المربع الرابع: ريلز وموشن (روابط حقيقية + حركة تلقائية مستقلة 100%) -->
-        <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; width: 100%;">
+                                                     <!-- المربع الرابع: ريلز وموشن (حجم محكوم + صورة طولية بالمنتصف + أسهم نيون مشعة) -->
+        <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; min-height: 480px; max-height: 520px; width: 100%;">
             
-            <!-- حاوية السلايدر الموزونة والمطابقة تماماً لبقية الجريد -->
-            <div class="slider-container" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; min-height: 250px;">
-                <div class="reels-slides-wrapper" id="reels-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out; transform: translateX(0px);">
-                    
-                    <!-- الريل 1 -->
-                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/4017785205147909', '_blank')">
-                        <img src="images/rm1.jpg" alt="Reels 1" style="width: 100%; height: 100%; object-fit: contain;">
-                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+            <!-- حاوية السلايدر - تم توسيطها وضبطها لعرض النسبة الطولية كاملة -->
+            <div class="slider-container" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; display: flex; align-items: center; justify-content: center; padding: 10px 0;">
+                
+                <!-- الإطار الداخلي الطولي الممركز بالمنتصف تماماً -->
+                <div style="width: auto; height: 100%; max-height: 380px; aspect-ratio: 9/16; overflow: hidden; position: relative; border-radius: 8px; background-color: #000; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);">
+                    <div class="reels-slides-wrapper" id="reels-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out; transform: translateX(0px);">
+                        
+                        <!-- الريل 1 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm1.jpg" alt="Reels 1" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5" style="filter: drop-shadow(0 0 8px #00ff77);"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- الريل 2 -->
-                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/3463296903818986', '_blank')">
-                        <img src="images/rm2.jpg" alt="Reels 2" style="width: 100%; height: 100%; object-fit: contain;">
-                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                        <!-- الريل 2 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm2.jpg" alt="Reels 2" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5" style="filter: drop-shadow(0 0 8px #00ff77);"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- الريل 3 -->
-                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/1666649731363694', '_blank')">
-                        <img src="images/rm3.jpg" alt="Reels 3" style="width: 100%; height: 100%; object-fit: contain;">
-                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                        <!-- الريل 3 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm3.jpg" alt="Reels 3" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5" style="filter: drop-shadow(0 0 8px #00ff77);"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- الريل 4 -->
-                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/1848437869396200', '_blank')">
-                        <img src="images/rm4.jpg" alt="Reels 4" style="width: 100%; height: 100%; object-fit: contain;">
-                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                        <!-- الريل 4 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm4.jpg" alt="Reels 4" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5" style="filter: drop-shadow(0 0 8px #00ff77);"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                            </div>
                         </div>
-                    </div>
 
-                    <!-- الريل 5 -->
-                    <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://www.facebook.com/reel/25238938432408638', '_blank')">
-                        <img src="images/rm5.jpg" alt="Reels 5" style="width: 100%; height: 100%; object-fit: contain;">
-                        <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                        <!-- الريل 5 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm5.jpg" alt="Reels 5" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(0,0,0,0.15); pointer-events: none;">
+                                <svg width="35" height="35" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5" style="filter: drop-shadow(0 0 8px #00ff77);"><path d="M23 7l-7 5 7 5V7z"></path><rect x="1" y="5" width="15" height="14" rx="2"></rect></svg>
+                            </div>
                         </div>
-                    </div>
 
+                    </div>
                 </div>
 
-                <!-- أزرار الأسهم النيون المدعومة بالتحريك اليدوي المباشر -->
-                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(-1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❮</button>
-                <button class="slider-btn next-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.2); border-radius: 50%; width: 35px; height: 35px; border: none; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10;">❯</button>
+                <!-- أزرار الأسهم النيون المشعة الثابتة والمشعة بوضوح وثبات -->
+                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(-1)" style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 38px; height: 38px; border: 2px solid #00ff77; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 0 0 12px #00ff77, inset 0 0 6px #00ff77; transition: all 0.3s ease;">❮</button>
+                <button class="slider-btn next-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(1)" style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%); background: rgba(0, 0, 0, 0.6); border-radius: 50%; width: 38px; height: 38px; border: 2px solid #00ff77; color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 10; box-shadow: 0 0 12px #00ff77, inset 0 0 6px #00ff77; transition: all 0.3s ease;">❯</button>
             </div>
 
             <!-- منطقة النصوص والمعلومات الموحدة والمطابقة لبقية الأقسام -->
-            <div style="padding: 15px 15px 18px 15px; text-align: left; background-color: #0b0713;">
+            <div style="padding: 10px 15px 18px 15px; text-align: left; background-color: #0b0713;">
                 <span style="font-size: 0.75rem; color: #8a2be2; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">04</span>
                 <h3 style="margin: 0px 0px 5px; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">REELS / MOTION</h3>
                 <p style="color: #666; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
             </div>
 
-            <!-- سكربت برمي مصلح بالكامل يدعم الحركة التلقائية الذاتية والتوافق التام مع الـ RTL -->
+            <!-- سكربت الحركة التلقائية المتوافق تماماً مع الـ RTL والمواقع العربية -->
             <script>
                 let currentReelIndex = 0;
                 let reelAutoSliderTimer;
@@ -293,23 +297,21 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                     }
                 }
 
-                // دالة تشغيل التمرير التلقائي كل 3 ثوانٍ
                 function startReelAutoSlider() {
                     reelAutoSliderTimer = setInterval(() => {
                         moveReelSlider(1);
                     }, 3000); 
                 }
 
-                // إعادة تعيين التوقيت عند الضغط اليدوي على الأسهم لمنع التداخل
                 function resetReelTimer() {
                     clearInterval(reelAutoSliderTimer);
                     startReelAutoSlider();
                 }
 
-                // بدء تشغيل الحركة التلقائية فور تحميل الصفحة
                 startReelAutoSlider();
             </script>
         </div>
+
 
 
 
