@@ -48,3 +48,37 @@
 .work-item img{transition:transform .4s ease-in-out !important}
 .work-item:hover img{transform:scale(1.025) !important}
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;scroll-behavior:auto !important;transition-duration:.01ms !important}}
+/* --- تفعيل حركة الكرة والمدارات بنجاح --- */
+
+/* 1. ربط العناصر بالأنيميشن الخاص بها */
+.hero-art .orbit-a { 
+    animation: spin-clockwise 20s linear infinite !important; 
+} 
+.hero-art .orbit-b { 
+    animation: spin-counter 25s linear infinite !important; 
+} 
+.hero-art .orb { 
+    animation: float-glow 6s ease-in-out infinite !important; 
+}
+
+/* 2. تعريف حركات الدوران والنبض للمتصفح */
+@keyframes spin-clockwise {
+    0% { transform: rotate(-25deg); }
+    100% { transform: rotate(335deg); }
+}
+
+@keyframes spin-counter {
+    0% { transform: rotate(45deg); }
+    100% { transform: rotate(-315deg); }
+}
+
+@keyframes float-glow {
+    0%, 100% { 
+        transform: translateY(0px) scale(1); 
+        box-shadow: 0 0 100px #803cff55, inset -30px -35px 80px #050508;
+    }
+    50% { 
+        transform: translateY(-10px) scale(1.02); 
+        box-shadow: 0 0 120px #9b4dff77, inset -30px -35px 80px #050508;
+    }
+}
