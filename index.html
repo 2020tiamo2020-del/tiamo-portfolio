@@ -263,29 +263,59 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
 
 
 
-                        <!--  المربع الخامس: VFX الاحترافي الموزون بالمسطرة -->
-            <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; justify-content: flex-end; background-color: #0b0713; min-height: 250px;">
-                <div style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
+                                   <!--  المربع الخامس: VFX الاحترافي الموزون بالمسطرة (إعادة تفعيل أنيميشن الكرة والحلقات والتصميم الزجاجي) -->
+            <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; min-height: 250px; width: 100%;">
+                <div style="text-decoration: none; color: inherit; display: flex; flex-direction: column; width: 100%; height: 100%; position: relative; justify-content: space-between; cursor: pointer;">
                     
-                    <!-- حاوية الصورة للـ VFX -->
-                    <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px 12px 0 0; background-color: #171123; display: flex; align-items: center; justify-content: center;">
-                    <img src="images/vfx.jpg" alt="VFX" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease-in-out;" onmouseover="this.style.transform='scale(1.06)';" onmouseout="this.style.transform='scale(1)';">
+                    <!-- حاوية الخلفية الديناميكية (الكرة والأوربت المتحرك) -->
+                    <div class="vfx-animation-backdrop" style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; z-index: 1; min-height: 200px; padding-top: 20px;">
                         
-                        <!-- أيقونة تأثيرات بصرية مؤقتة -->
-                        <div style="display: none; color: #554d63; flex-direction: column; align-items: center; gap: 8px;">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                            <span style="font-size: 11px;">VFX Placeholder</span>
-                        </div>
+                        <!-- الكرة البنفسجية المضيئة المركزية مع أنيميشن النبض -->
+                        <div class="vfx-orb" style="width: 140px; height: 140px; background: radial-gradient(circle, #7000ff 0%, #1a004a 70%, transparent 100%); border-radius: 50%; opacity: 0.7; filter: blur(2px); animation: vfxOrbPulse 3s ease-in-out infinite alternate;"></div>
+                        
+                        <!-- الحلقات المدارية الخارجية مع أنيميشن الدوران المستمر حول الكرة -->
+                        <div class="vfx-ring ring-1" style="position: absolute; width: 240px; height: 90px; border: 1px solid rgba(112, 0, 255, 0.4); border-radius: 50%; transform: rotate(35deg); animation: vfxRingRotate1 10s linear infinite;"></div>
+                        <div class="vfx-ring ring-2" style="position: absolute; width: 260px; height: 100px; border: 1px solid rgba(112, 0, 255, 0.25); border-radius: 50%; transform: rotate(-45deg); animation: vfxRingRotate2 14s linear infinite;"></div>
+                        <div class="vfx-ring ring-3" style="position: absolute; width: 220px; height: 80px; border: 1px solid rgba(140, 43, 226, 0.2); border-radius: 50%; transform: rotate(15deg); animation: vfxRingRotate3 12s linear infinite;"></div>
                     </div>
-                    
-                    <!-- منطقة النصوص -->
-                    <div style="padding: 20px 15px; text-align: left;">
+
+                    <!-- اللوحة الزجاجية العائمة الممركزة في المنتصف تماماً للنصوص (مطابقة للصورة بالملي) -->
+                    <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); background: rgba(23, 17, 35, 0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.07); padding: 18px 30px; border-radius: 16px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.6); z-index: 2; min-width: 170px; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseover="this.style.boxShadow='0 15px 40px rgba(112, 0, 255, 0.3)'; this.style.borderColor='rgba(112, 0, 255, 0.3)';" onmouseout="this.style.boxShadow='0 15px 35px rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255, 255, 255, 0.07)';">
+                        <span style="font-size: 0.7rem; color: #8a2be2; font-weight: bold; letter-spacing: 4px; display: block; margin-bottom: 6px; text-transform: uppercase;">AI</span>
+                        <h2 style="margin: 0; font-size: 2rem; font-weight: 900; color: #fff; letter-spacing: 1px; line-height: 1;">VFX</h2>
+                        <span style="font-size: 0.55rem; color: rgba(255,255,255,0.4); display: block; margin-top: 8px; letter-spacing: 1.5px; text-transform: uppercase;">• DESIGN • MOTION • VFX</span>
+                    </div>
+
+                    <!-- منطقة النصوص والمعلومات السفلية (المحاذاة مسطرة وعلى نفس خط الجريد بالملي) -->
+                    <div style="padding: 20px 15px 15px 15px; text-align: right; box-sizing: border-box; margin-top: auto; position: relative; z-index: 3;">
                         <span style="font-size: 0.75rem; color: #7000ff; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">05</span>
                         <h3 style="margin: 0 0 5px 0; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">VFX</h3>
-                        <p style="color: #bbb; font-size: 13px; margin: 0;">🔸 أضغط لمشاهدة خدع وتأثيرات الفيديو 🔸</p>
+                        <p style="color: #666; font-size: 13px; margin: 0; direction: rtl;">🔸 أضغط لمشاهدة خدع وتأثيرات الفيديو 🔸</p>
                     </div>
+
                 </div>
             </div>
+
+            <!-- إضافة أكواد الـ Keyframes للأنيميشن ديناميكياً ليعمل فوراً وبمنتهى القوة والسرعة -->
+            <style>
+                @keyframes vfxOrbPulse {
+                    0% { transform: scale(0.95); opacity: 0.6; filter: blur(3px); }
+                    100% { transform: scale(1.05); opacity: 0.85; filter: blur(1px); }
+                }
+                @keyframes vfxRingRotate1 {
+                    0% { transform: rotate(35deg) rotate(0deg); }
+                    100% { transform: rotate(35deg) rotate(360deg); }
+                }
+                @keyframes vfxRingRotate2 {
+                    0% { transform: rotate(-45deg) rotate(0deg); }
+                    100% { transform: rotate(-45deg) rotate(-360deg); }
+                }
+                @keyframes vfxRingRotate3 {
+                    0% { transform: rotate(15deg) rotate(0deg); }
+                    100% { transform: rotate(15deg) rotate(360deg); }
+                }
+            </style>
+
 
             <!--  المربع السادس: GRAPHIC DESIGN الاحترافي الموزون بالمسطرة -->
             <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; justify-content: flex-end; background-color: #0b0713; min-height: 250px;">
