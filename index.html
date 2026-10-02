@@ -211,13 +211,13 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
             </div>
                 
               
-                                                                           <!-- المربع الرابع: ريلز وموشن (إصلاح الجريد، الروابط، الحجم والمحاذاة التامة) -->
+                                                                                   <!-- المربع الرابع: ريلز وموشن (إصلاح بنية الـ HTML وإغلاق الحاويات بدقة) -->
         <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%;">
             
-            <!-- حاوية السلايدر - تركت مرنة لملء مساحة الجريد الأصلية بدون بكسل ثابت -->
+            <!-- حاوية السلايدر الموزونة هندسياً بداخل الجريد -->
             <div class="slider-container" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; display: flex; align-items: center; justify-content: center; padding-top: 15px;">
                 
-                <!-- الإطار الداخلي الطولي الممركز بالمنتصف تماماً بنسبة 9:16 وبحجم محكوم تلقائياً -->
+                <!-- الإطار الداخلي الطولي الممركز بالمنتصف بنسبة 9:16 -->
                 <div style="width: auto; height: 100%; min-height: 280px; max-height: 340px; aspect-ratio: 9/16; overflow: hidden; position: relative; border-radius: 8px; background-color: #000; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);">
                     <div class="reels-slides-wrapper" id="reels-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out; transform: translateX(0px);">
                         
@@ -264,7 +264,7 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                     </div>
                 </div>
 
-                <!-- أزرار الأسهم النيون المشعة التفاعلية والكاملة في التصميم -->
+                <!-- أزرار الأسهم - مُضاف إليها تأثير النيون المشع الفوسفوري الثابت وعند التحويم -->
                 <button class="slider-btn prev-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(-1)" 
                         onmouseenter="this.style.boxShadow='0 0 20px #00ff77, inset 0 0 10px #00ff77'; this.style.textShadow='0 0 8px #00ff77'; this.style.borderColor='#00ff77';" 
                         onmouseleave="this.style.boxShadow='0 0 8px rgba(0,255,119,0.3)'; this.style.textShadow='none'; this.style.borderColor='rgba(0,255,119,0.4)';"
@@ -283,7 +283,7 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
                 <p style="color: #666; font-size: 13px; margin: 0; direction: rtl;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
             </div>
 
-            <!-- سكربت الحركة التلقائية المصلح تماماً والداعم للـ RTL بدون تداخل -->
+            <!-- سكربت التمرير المصلح المتوافق مع المتصفحات العربية -->
             <script>
                 let currentReelIndex = 0;
                 let reelAutoSliderTimer;
@@ -312,6 +312,10 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
 
                 function resetReelTimer() {
                     clearInterval(reelAutoSliderTimer);
+                    startReelAutoSlider();
+                }
+
+
 
 
 
