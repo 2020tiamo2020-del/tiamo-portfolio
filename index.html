@@ -211,83 +211,90 @@ document.querySelectorAll('.slider-btn').forEach(btn => {
 
                <!-- ==================== المربع الرابع: ريلز وموشن الموزون (نسخة واحدة بدون تكرار) ==================== -->
 <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; min-height: 100%;">
-    
-    <!-- حاوية السلايدر المتناسقة مع بقية الجريد -->
-    <div class="slider-container" id="reels-slider" style="position: relative; width: 100%; aspect-ratio: 16/9; overflow: hidden; background-color: #171123; display: flex; align-items: center; justify-content: center;">
-        <div class="slider-slides" style="display: flex; transition: transform 0.5s ease; width: 100%; height: 100%;">
+           <!-- ==================== المربع الرابع: ريلز وموشن ==================== -->
+        <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%; width: 100%;">
             
-            <!-- الريل 1 -->
-            <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                <img src="images/reels.jpg" alt="Reels 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
-                <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-                    <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو</span>
+            <!-- حاوية السلايدر - تم ضبطها لتوسيط كفرات الريلز الطولية بالمنتصف تماماً -->
+            <div class="slider-container" style="position: relative; width: 100%; flex-grow: 1; overflow: hidden; background-color: #0b0713; display: flex; align-items: center; justify-content: center; padding-top: 15px;">
+                
+                <!-- الإطار الداخلي الطولي الممركز بالمنتصف تماماً بنسبة 9:16 وبحجم محكوم تلقائياً -->
+                <div style="width: auto; height: 100%; min-height: 280px; max-height: 330px; aspect-ratio: 9/16; overflow: hidden; position: relative; border-radius: 8px; background-color: #000; box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center;">
+                    <div class="reels-slides-wrapper" id="reels-track" style="display: flex; width: 100%; height: 100%; transition: transform 0.4s ease-in-out; transform: translateX(0px);">
+                        
+                        <!-- الريل 1 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm1.jpg" alt="Reels 1" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- الريل 2 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm2.jpg" alt="Reels 2" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- الريل 3 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm3.jpg" alt="Reels 3" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- الريل 4 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm4.jpg" alt="Reels 4" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                        <!-- الريل 5 -->
+                        <div class="slide" style="min-width: 100%; width: 100%; height: 100%; position: relative; cursor: pointer; display: flex; align-items: center; justify-content: center;" onclick="window.open('https://facebook.com', '_blank')">
+                            <img src="images/rm5.jpg" alt="Reels 5" style="width: 100%; height: 100%; object-fit: cover;">
+                        </div>
+
+                    </div>
                 </div>
+
+                <!-- أزرار الأسهم النيون للمربع الرابع - تأثير النيون الأخضر المشع التفاعلي المباشر -->
+                <button class="slider-btn prev-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(-1)" 
+                        onmouseenter="this.style.boxShadow='0 0 20px #00ff77, inset 0 0 10px #00ff77'; this.style.textShadow='0 0 8px #00ff77'; this.style.borderColor='#00ff77';" 
+                        onmouseleave="this.style.boxShadow='0 0 8px rgba(0,255,119,0.3)'; this.style.textShadow='none'; this.style.borderColor='rgba(0,255,119,0.4)';"
+                        style="position: absolute; left: 15px; top: 50%; transform: translateY(-50%) !important; background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 38px; height: 38px; border: 2px solid rgba(0,255,119,0.4); color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100; box-shadow: 0 0 8px rgba(0,255,119,0.3); transition: all 0.25s ease-in-out;">❮</button>
+                
+                <button class="slider-btn next-btn" onclick="event.stopPropagation(); resetReelTimer(); moveReelSlider(1)" 
+                        onmouseenter="this.style.boxShadow='0 0 20px #00ff77, inset 0 0 10px #00ff77'; this.style.textShadow='0 0 8px #00ff77'; this.style.borderColor='#00ff77';" 
+                        onmouseleave="this.style.boxShadow='0 0 8px rgba(0,255,119,0.3)'; this.style.textShadow='none'; this.style.borderColor='rgba(0,255,119,0.4)';"
+                        style="position: absolute; right: 15px; top: 50%; transform: translateY(-50%) !important; background: rgba(0, 0, 0, 0.7); border-radius: 50%; width: 38px; height: 38px; border: 2px solid rgba(0,255,119,0.4); color: #00ff77; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; z-index: 100; box-shadow: 0 0 8px rgba(0,255,119,0.3); transition: all 0.25s ease-in-out;">❯</button>
             </div>
 
-            <!-- الريل 2 -->
-            <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://facebook.com', '_blank')">
-                <img src="images/reels.jpg" alt="Reels 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
-                <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-                    <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو</span>
-                </div>
+            <!-- منطقة نصوص المربع الرابع - تم وزن الحواف السفلية لتطابق جيرانها بالملي -->
+            <div style="padding: 10px 15px 15px 15px; text-align: right; background-color: #0b0713; width: 100%; box-sizing: border-box; margin-top: auto;">
+                <span style="font-size: 0.75rem; color: #8a2be2; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">04</span>
+                <h3 style="margin: 0px 0px 8px; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">REELS / MOTION</h3>
+                <p style="color: #666; font-size: 13px; margin: 0; direction: rtl;">🔸 اضغط لمشاهدة فيديو الريل الدولي والتنقل بالأسهم 🔸</p>
             </div>
-
-            <!-- الريل 3 -->
-            <div class="slide" style="min-width: 100%; height: 100%; position: relative; cursor: pointer;" onclick="window.open('https://fb.watch', '_blank')">
-                <img src="images/reels.jpg" alt="Reels 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.8;">
-                <div style="position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; background: rgba(0,0,0,0.4);">
-                    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#00ff77" stroke-width="1.5"><path d="M23 7l-7 5 7 5V7z"/><rect x="1" y="5" width="15" height="14" rx="2"/></svg>
-                    <span style="font-size: 11px; color: #00ff77; margin-top: 5px;">شاهد الفيديو</span>
-                </div>
-            </div>
-
         </div>
 
-        <!-- أزرار الأسهم بتأثير النيون الأخضر الفاتح المشع -->
-        <button class="slider-btn prev-btn" onclick="handleCustomSlider(this, -1)" style="position: absolute; left: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.15); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: all 0.3s ease; backdrop-filter: blur(5px); z-index: 10; border: 1px solid #00ff77; color: #fff; box-shadow: 0 0 10px rgba(0, 255, 119, 0.3);">❮</button>
-        <button class="slider-btn next-btn" onclick="handleCustomSlider(this, 1)" style="position: absolute; right: 10px; top: 50%; transform: translateY(-50%); background: rgba(0, 255, 119, 0.15); border-radius: 50%; width: 36px; height: 36px; cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 14px; transition: all 0.3s ease; backdrop-filter: blur(5px); z-index: 10; border: 1px solid #00ff77; color: #fff; box-shadow: 0 0 10px rgba(0, 255, 119, 0.3);">❯</button>
-    </div>
-
-        <!-- منطقة النصوص والمعلومات -->
-    <div style="padding: 20px 15px 22px 22px; text-align: left;">
-        <!-- تم تغيير اللون هنا إلى البنفسجي المتناسق مع بقية المربعات -->
-        <span style="font-size: 0.75rem; color: #a855f7; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">04</span>
-        <h3 style="margin: 0 0 5px 0; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">REELS / MOTION</h3>
-        <p style="color: #bbb; font-size: 13px; margin: 0;">🔸 اضغط لمشاهدة فيديو الريل الطولي والتنقل بالأسهم 🔸</p>
-    </div>
-</div>
-
-
-
-
-
-                        <!--  المربع الخامس: VFX الاحترافي الموزون بالمسطرة -->
-            <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; justify-content: flex-end; background-color: #0b0713; min-height: 250px;">
-                <div style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
+        <!-- ==================== المربع الخامس: VFX الاحترافي الموزون ==================== -->
+        <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; background-color: #0b0713; height: 100%;">
+            <div style="text-decoration: none; color: inherit; display: flex; flex-direction: column; width: 100%; height: 100%; position: relative; justify-content: space-between; cursor: pointer;">
+                
+                <!-- حاوية الخلفية الديناميكية المصلحة لتتخطى حظر الـ CSS وتدور بسلاسة -->
+                <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; pointer-events: none; overflow: hidden; z-index: 1; padding-top: 10px;">
+                    <!-- الكرة المركزية النابضة -->
+                    <div style="width: 140px; height: 140px; background: radial-gradient(circle, #7000ff 0%, #1a004a 70%, transparent 100%); border-radius: 50%; opacity: 0.75; filter: blur(2px); animation: vfxOrbPulse 3s ease-in-out infinite alternate;"></div>
                     
-                    <!-- حاوية الصورة للـ VFX -->
-                    <div style="width: 100%; aspect-ratio: 16/9; overflow: hidden; border-radius: 12px 12px 0 0; background-color: #171123; display: flex; align-items: center; justify-content: center;">
-                    <img src="images/vfx.jpg" alt="VFX" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" style="width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 0.4s ease-in-out;" onmouseover="this.style.transform='scale(1.06)';" onmouseout="this.style.transform='scale(1)';">
-                        
-                        <!-- أيقونة تأثيرات بصرية مؤقتة -->
-                        <div style="display: none; color: #554d63; flex-direction: column; align-items: center; gap: 8px;">
-                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
-                            <span style="font-size: 11px;">VFX Placeholder</span>
-                        </div>
-                    </div>
-                    
-                    <!-- منطقة النصوص -->
-                    <div style="padding: 20px 15px; text-align: left;">
-                        <span style="font-size: 0.75rem; color: #7000ff; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">05</span>
-                        <h3 style="margin: 0 0 5px 0; font-size: 1.1rem; font-weight: bold; color: #fff; text-transform: uppercase;">VFX</h3>
-                        <p style="color: #bbb; font-size: 13px; margin: 0;">🔸 أضغط لمشاهدة خدع وتأثيرات الفيديو 🔸</p>
-                    </div>
+                    <!-- الحلقات الثلاثية المدارية التي تدور بدون توقف بالاعتماد على الفئة البديلة -->
+                    <div style="position: absolute; width: 230px; height: 90px; border: 1px solid rgba(112, 0, 255, 0.45); border-radius: 50%; animation: vfxSpinRing1 12s linear infinite;"></div>
+                    <div style="position: absolute; width: 250px; height: 100px; border: 1px solid rgba(112, 0, 255, 0.3); border-radius: 50%; animation: vfxSpinRing2 16s linear infinite;"></div>
+                    <div style="position: absolute; width: 210px; height: 80px; border: 1px solid rgba(140, 43, 226, 0.25); border-radius: 50%; animation: vfxSpinRing3 14s linear infinite;"></div>
                 </div>
-            </div>
 
-            <!--  المربع السادس: GRAPHIC DESIGN الاحترافي الموزون بالمسطرة -->
+                <!-- اللوحة الزجاجية العائمة المطابقة للصورة تماماً -->
+                <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%) !important; background: rgba(23, 17, 35, 0.65); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); border: 1px solid rgba(255, 255, 255, 0.07); padding: 18px 30px; border-radius: 16px; text-align: center; box-shadow: 0 15px 35px rgba(0,0,0,0.6); z-index: 2; min-width: 170px; display: flex; flex-direction: column; align-items: center; justify-content: center; transition: all 0.3s ease;" onmouseenter="this.style.boxShadow='0 15px 40px rgba(112, 0, 255, 0.3)'; this.style.borderColor='rgba(112, 0, 255, 0.3)';" onmouseleave="this.style.boxShadow='0 15px 35px rgba(0,0,0,0.6)'; this.style.borderColor='rgba(255, 255, 255, 0.07)';">
+                    <span style="font-size: 0.7rem; color: #8a2be2; font-weight: bold; letter-spacing: 4px; display: block; margin-bottom: 6px; text-transform: uppercase;">AI</span>
+                    <h2 style="margin: 0; font-size: 2rem; font-weight: 900; color: #fff; letter-spacing: 1px; line-height: 1;">VFX</h2>
+                    <span style="font-size: 0.55rem; color: rgba(255,255,255,0.4); display: block; margin-top: 8px; letter-spacing: 1.5px; text-transform: uppercase;">• DESIGN • MOTION • VFX</span>
+                </div>
+
+                <!-- منطقة نصوص المربع الخامس - المحاذاة مسطرة ومتطابقة هندسياً مع المربع 4 و 6 -->
+                <div style="padding: 20px 15px 15px 15px; text-align: right; box-sizing: border-box; margin-top: auto; position: relative; z-index: 3;">
+                    <span style="font-size: 0.75rem; color: #7000ff; font-weight: bold; display: block; margin-bottom: 5px; text-transform: uppercase;">05</span>
+
             <div class="work-item" style="position: relative; overflow: hidden; border-radius: 12px; display: flex; flex-direction: column; justify-content: flex-end; background-color: #0b0713; min-height: 250px;">
                 <div style="text-decoration: none; color: inherit; display: block; width: 100%; height: 100%;">
                     
